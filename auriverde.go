@@ -9,14 +9,14 @@ import (
 type BasicPlugin struct{}
 
 func (c *BasicPlugin) Run(cliConnection plugin.CliConnection, args []string) {
-	if args[0] == "basic-plugin-command" {
-		fmt.Println("Running the basic-plugin-command")
+	if args[0] == "auriverde" {
+		fmt.Println("Running the auriverde command")
 	}
 }
 
 func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
-		Name: "MyBasicPlugin",
+		Name: "Auriverde",
 		Version: plugin.VersionType{
 			Major: 1,
 			Minor: 0,
@@ -29,10 +29,10 @@ func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {
 		},
 		Commands: []plugin.Command{
 			plugin.Command{
-				Name:     "basic-plugin-command",
-				HelpText: "Basic plugin command's help text",
+				Name:     "auriverde",
+				HelpText: "Some help...",
 				UsageDetails: plugin.Usage{
-					Usage: "basic-plugin-command\n   cf basic-plugin-command",
+					Usage: "auriverde\n   cf auriverde",
 				},
 			},
 		},
