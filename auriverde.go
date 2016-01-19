@@ -9,16 +9,16 @@ import (
 type BasicPlugin struct{}
 
 func (c *BasicPlugin) Run(cliConnection plugin.CliConnection, args []string) {
-//	if args[0] == "auriverde" {
-		fmt.Println("Running the auriverde command")
-//	}
+	fmt.Println("Executing command")
 }
 
-const helpText = "auriverde is a tool for blue-green deployment"
+const pluginName = "auriverde"
+
+const helpText = pluginName + " : zero downtime deploys and more"
 
 func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
-		Name: "auriverde",
+		Name: pluginName,
 		Version: plugin.VersionType{
 			Major: 0,
 			Minor: 1,
@@ -31,10 +31,10 @@ func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {
 		},
 		Commands: []plugin.Command{
 			plugin.Command{
-				Name:     "auriverde",
+				Name:     pluginName,
 				HelpText: helpText,
 				UsageDetails: plugin.Usage{
-					Usage: "cf auriverde",
+					Usage: "cf " + pluginName,
 				},
 			},
 		},
