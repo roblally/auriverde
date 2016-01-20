@@ -1,0 +1,11 @@
+{
+	"ImportPath": "github.com/roblally/auriverde",
+	"GoVersion": "go1.5",
+	"Deps": [
+		{
+			"ImportPath": "github.com/cloudfoundry/cli/plugin",
+			"Comment": "v6.15.0-40-g7ce16fa",
+			"Rev": "7ce16fae74a45db0f03b2fd9b9106836960cddc3"
+		}
+	]
+}
