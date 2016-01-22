@@ -9,14 +9,14 @@ import (
 type BasicPlugin struct{}
 
 func (c *BasicPlugin) Run(cliConnection plugin.CliConnection, args []string) {
-	fmt.Println("Executing command")
+	fmt.Println("Executing command")   
 }
 
 const pluginName = "auriverde"
 
 const helpText = pluginName + " : zero downtime deploys and more"
 
-func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {
+func (c *BasicPlugin) GetMetadata() plugin.PluginMetadata {   
 	return plugin.PluginMetadata{
 		Name: pluginName,
 		Version: plugin.VersionType{
